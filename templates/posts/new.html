@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+
+{% block title}New Post{% endblock title %}
+
+<h1>New Post</h1>
+<form method="POST">
+    {% csrf_token %}
+    {{ form|crispy }}
+    <input type="submit" class="btn btn-success" value="Create">
+</form>
+{% endblock content %}
